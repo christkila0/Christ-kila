@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>C-Infinity - Bande Dessinée Futuriste</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar Menu -->
+    <div id="sidebar" class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#" class="menu-item" data-target="accueil">Accueil</a></li>
+                <li><a href="#" class="menu-item" data-target="a-propos">À propos</a></li>
+                <li><a href="#" class="menu-item" data-target="publier">Publier</a></li>
+                <li><a href="#" class="menu-item" data-target="explorer">Explorer</a></li>
+                <li><a href="#" class="menu-item" data-target="profil">Profil</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Dashboard Toggle Button -->
+    <div id="dashboard-toggle" class="dashboard-toggle">&#9776;</div>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Accueil Section -->
+        <section id="accueil" class="section">
+            <h1>Bienvenue sur C-Infinity</h1>
+            <p>C-Infinity est une plateforme de bandes dessinées futuristes où créateurs et lecteurs peuvent explorer un univers infini d'histoires et d'œuvres visuelles. Créez, explorez et interagissez avec des œuvres des meilleurs artistes !</p>
+        </section>
+
+        <!-- À propos Section -->
+        <section id="a-propos" class="section hidden">
+            <h2>À propos de C-Infinity</h2>
+            <p>C-Infinity est une société dédiée à l'innovation dans l'univers des bandes dessinées. Nous cherchons à repousser les limites de la narration visuelle avec des créations exceptionnelles. Rejoignez-nous et devenez un créateur !</p>
+        </section>
+
+        <!-- Publier Section -->
+        <section id="publier" class="section hidden">
+            <h2>Publier Votre Œuvre</h2>
+            <form id="publish-form">
+                <input type="email" id="email" placeholder="Entrez votre e-mail" required />
+                <input type="text" id="username" placeholder="Entrez votre nom" required />
+                <input type="file" id="profile-pic" placeholder="Téléchargez votre photo de profil" required />
+                <button type="submit">Publier</button>
+            </form>
+            <div id="publish-success" class="hidden">
+                <p>Votre publication a été soumise avec succès et sera approuvée par notre algorithme.</p>
+            </div>
+        </section>
+
+        <!-- Explorer Section -->
+        <section id="explorer" class="section hidden">
+            <h2>Explorer les Bandes Dessinées</h2>
+            <div class="explore-content">
+                <div class="comic-post">
+                    <h3>Bande Dessinée 1</h3>
+                    <p>Description de la bande dessinée.</p>
+                    <span id="like-count-1">0</span> <button class="like-btn" data-post-id="1">Like</button>
+                    <div class="comment-section">
+                        <input type="text" placeholder="Ajouter un commentaire" />
+                        <button>Commenter</button>
+                    </div>
+                </div>
+                <div class="comic-post">
+                    <h3>Bande Dessinée 2</h3>
+                    <p>Description de la bande dessinée.</p>
+                    <span id="like-count-2">0</span> <button class="like-btn" data-post-id="2">Like</button>
+                    <div class="comment-section">
+                        <input type="text" placeholder="Ajouter un commentaire" />
+                        <button>Commenter</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profil Section -->
+        <section id="profil" class="section hidden">
+            <h2>Votre Profil</h2>
+            <div id="profile-info">
+                <p id="profile-username">Nom d'utilisateur: JohnDoe</p>
+                <p id="profile-email">E-mail: johndoe@example.com</p>
+                <button id="edit-profile">Modifier le Profil</button>
+                <button id="delete-profile">Supprimer le Profil</button>
+            </div>
+            <div id="profile-actions" class="hidden">
+                <button id="delete-posts">Supprimer vos publications</button>
+            </div>
+            <div class="profile-posts">
+                <div class="user-post">
+                    <h3>Œuvre Personnelle 1</h3>
+                    <p>Description de l'œuvre.</p>
+                    <button>Supprimer</button>
+                </div>
+                <div class="user-post">
+                    <h3>Œuvre Personnelle 2</h3>
+                    <p>Description de l'œuvre.</p>
+                    <button>Supprimer</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    
+</body>
+
+</html>
