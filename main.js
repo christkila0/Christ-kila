@@ -80,7 +80,26 @@ let deletePostButtons = document.querySelectorAll('.user-post button');
 deletePostButtons.forEach(button => {
     button.addEventListener('click', function() {
         if (confirm("Êtes-vous sûr de vouloir supprimer cette œuvre ?")) {
-            this.parentElement.remove();
-        }
+         this.parentElement.remove();
+            document.getElementById("uploadForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const fileInput = document.getElementById("imageInput");
+    const file = fileInput.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const img = document.createElement("img");
+            img.src = event.target.result;
+            img.style.maxWidth = "300px"; 
+
+            document.getElementById("imageContainer").appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    } else {
+        alert("Veuillez choisir une image !");
+               }
+      ) 
     });
 });
